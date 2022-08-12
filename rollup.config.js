@@ -6,6 +6,7 @@ import cssnano from "cssnano";
 import vue from "rollup-plugin-vue";
 import { terser } from "rollup-plugin-terser";
 import del from "rollup-plugin-delete";
+import RollupAlias from "@rollup/plugin-alias";
 const glob = require("glob");
 const path = require("path");
 
@@ -23,6 +24,9 @@ const componentsObject = glob
 
 const configFn = (name) => ({
   plugins: [
+    RollupAlias({
+      entries: [{ find: "@", replacement: path.join(__dirname, "src") }],
+    }),
     vue(),
     babel({
       exclude: "node_modules/**",
