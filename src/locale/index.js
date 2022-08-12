@@ -2,7 +2,7 @@ import defaultLocal from "./cn";
 
 export const vueLocal = null;
 
-export default install = (Vue) => {
+const install = (Vue) => {
   if (vueLocal) return;
   vueLocal = new Vue({
     data() {
@@ -13,6 +13,11 @@ export default install = (Vue) => {
   });
 };
 
-export const use = (l) => {
+const use = (l) => {
   vueLocal.$data.locale = l || defaultLocal;
+};
+
+export default {
+  install,
+  use,
 };
