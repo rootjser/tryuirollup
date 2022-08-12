@@ -1,6 +1,6 @@
 {
   "name": "tryuirollup",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "dist/my-lib-cjs.js",
   "module": "dist/my-lib-es.js",
