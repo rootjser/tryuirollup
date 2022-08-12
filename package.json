@@ -5,7 +5,9 @@
   "main": "dist/my-lib-cjs.js",
   "module": "dist/my-lib-es.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "rollup -c",
+    "build:css": "gulp build"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,11 @@
     "@vue/compiler-sfc": "^3.2.37",
     "autoprefixer": "^8.0.0",
     "cssnano": "^5.1.12",
+    "glob": "^8.0.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^5.1.0",
     "rollup": "^2.77.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -24,7 +31,6 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-vue": "^6.0.0",
-    "sass": "^1.54.4",
-    "glob": "^8.0.3"
+    "sass": "^1.54.4"
   }
 }
