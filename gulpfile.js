@@ -17,8 +17,12 @@ function copyfont() {
     .pipe(dest("./lib/theme-chalk/fonts"));
 }
 
+function copyLocale() {
+  return src("./src/components/locale/language/**").pipe(dest("./lib/locale"));
+}
+
 function moveMainCss() {
   return src("./lib/theme-chalk/index.css").pipe(dest("./dist/theme-chalk"));
 }
 
-exports.build = series(compile, copyfont, moveMainCss);
+exports.build = series(compile, copyfont, copyLocale, moveMainCss);

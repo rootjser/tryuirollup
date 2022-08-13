@@ -1,6 +1,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      a: 1,
+    };
+  },
   methods: {
     onClick() {
       alert("11");

@@ -1,12 +1,10 @@
 import button from "./components/button/index.js";
 import select from "./components/select/index.js";
 import icon from "./components/icon/index.js";
-import locale from "./locale/index.js";
+import locale from "./components/locale/index.js";
 
 function install(Vue) {
   //外部的Vue.use(MyLib)会执行该方法，完成组件的全局注册。
-  // 国际化
-  Vue.use(locale);
   Vue.use(button);
   Vue.use(select);
   Vue.use(icon);
@@ -17,5 +15,5 @@ if (window && window.Vue) {
   Vue.use(install);
 }
 
-export { button, select, icon };
+export { button, select, icon, locale };
 export default install;

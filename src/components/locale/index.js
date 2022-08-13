@@ -1,6 +1,6 @@
-import defaultLocal from "./cn";
+import defaultLocal from "./language/cn";
 
-export const vueLocal = null;
+export let vueLocal = null;
 
 const install = (Vue) => {
   if (vueLocal) return;
